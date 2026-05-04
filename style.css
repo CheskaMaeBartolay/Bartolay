@@ -303,6 +303,8 @@ section{
     margin: 0 1.5rem 1.5rem;
     line-height: 1.7;
     font-size: 0.98rem;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 .main-container .content{
@@ -410,14 +412,11 @@ section{
     }
 
     .nav-container .links{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        display: none;
     }
 
     .hamburg,.cancel{
-        display: none;
+        display: block;
     }
 
     .main-container .content{
@@ -450,6 +449,86 @@ section{
 }
 
 @media (max-width:600px) {
+    nav{
+        height: 8vh;
+    }
+
+    .nav-container{
+        padding: 0 1rem;
+    }
+
+    .logo{
+        font-size: 1.2rem;
+    }
+
+    .logo span{
+        font-size: 1rem;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg{
+        display: block;
+    }
+
+    .dropdown .links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown .links a{
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+
+    section{
+        padding: 2rem 0;
+    }
+
+    .main-container{
+        flex-direction: column;
+        padding-left: 1rem;
+        gap: 1.5rem;
+    }
+
+    .main-container .image{
+        width: 100%;
+    }
+
+    .main-container .content{
+        width: 100%;
+    }
+
+    .content h1{
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    .content p{
+        font-size: 0.9rem;
+    }
+
+    .typewriter{
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .social-links{
+        gap: 1rem;
+    }
+
+    .social-links i{
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    .content button{
+        width: 60%;
+        height: 5vh;
+        font-size: 0.9rem;
+    }
+
     .portfolio-grid{
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -457,7 +536,90 @@ section{
     }
 
     .portfolio-grid img{
-        height: 280px;
+        height: 200px;
+    }
+
+    .portfolio-header{
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .portfolio-header h2{
+        font-size: 1rem;
+    }
+
+    .portfolio-header h1{
+        font-size: 1.5rem;
+    }
+
+    .about-page .main-container{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        padding: 2rem 0.5rem 2rem;
+    }
+
+    .about-card{
+        border-radius: 16px;
+    }
+
+    .about-card img{
+        height: 180px;
+    }
+
+    .about-card h2{
+        font-size: 1rem;
+        margin: 0.75rem 1rem 0.3rem;
+    }
+
+    .about-card p{
+        font-size: 0.85rem;
+        margin: 0 1rem 1rem;
+        max-height: 150px;
+    }
+
+    section h2{
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .portfolio-banner{
+        padding: 1rem 1rem 2rem;
+    }
+
+    .portfolio-banner img{
+        height: 150px;
     }
 }
+
+@media (max-width:400px) {
+    .hamburg{
+        display: block;
+    }
+
+    .about-page .main-container{
+        grid-template-columns: 1fr;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .dropdown .links a{
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+
+    .content h1{
+        font-size: 1.3rem;
+    }
+
+    .about-card h2{
+        font-size: 0.9rem;
+    }
+
+    .about-card p{
+        font-size: 0.8rem;
+        max-height: 120px;
+    }
+}
+
 
